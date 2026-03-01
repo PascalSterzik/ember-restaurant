@@ -170,7 +170,27 @@
             const target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = Math.min(Math.max(Math.abs(distance) * 0.8, 600), 1400);
+                let startTime = null;
+
+                function easeOutQuart(t) {
+                    return 1 - Math.pow(1 - t, 4);
+                }
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = easeOutQuart(progress);
+                    window.scrollTo(0, startPosition + distance * eased);
+                    if (progress < 1) requestAnimationFrame(animation);
+                }
+
+                requestAnimationFrame(animation);
             }
         });
     });
