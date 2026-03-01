@@ -47,8 +47,8 @@
             }
         });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
     });
 
     document.querySelectorAll('.reveal, .stagger-children').forEach(el => {
@@ -174,7 +174,7 @@
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                 const startPosition = window.pageYOffset;
                 const distance = targetPosition - startPosition;
-                const duration = Math.min(Math.max(Math.abs(distance) * 0.8, 600), 1400);
+                const duration = Math.min(Math.max(Math.abs(distance) * 1.2, 800), 2000);
                 let startTime = null;
 
                 function easeOutQuart(t) {
