@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Table | EMBER — Open-Fire Fine Dining in Portland</title>
+    <meta name="description" content="Reserve your table at EMBER. Open Wednesday through Sunday, 5 PM to 10 PM. 40 seats, one open hearth, and a menu that changes with the seasons.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reserve a Table | EMBER Portland">
+    <meta property="og:description" content="Reserve your table at EMBER. Open Wednesday through Sunday, 5 PM to 10 PM. 40 seats, one open hearth, and a menu that changes with the seasons.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1200&h=630&fit=crop&q=80">
+    <meta property="og:url" content="https://ember-portland.com/reserve">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ReservationAction",
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://ember-portland.com/reserve",
+            "actionPlatform": [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/MobileWebPlatform"
+            ]
+        },
+        "object": {
+            "@type": "Restaurant",
+            "name": "EMBER",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "724 NW 14th Avenue",
+                "addressLocality": "Portland",
+                "addressRegion": "OR",
+                "postalCode": "97209"
+            },
+            "telephone": "+1-503-255-8347"
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23c8845f'/></svg>">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">Ember</a>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="about.html" class="nav-link">Our Story</a>
+                <a href="reserve.html" class="nav-link active">Reserve</a>
+            </nav>
+            <a href="tel:+15032558347" class="btn btn--primary header-cta">Call (503) 255-8347</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero page-hero-compact">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1600&h=500&fit=crop&q=80" alt="Candlelit table at EMBER restaurant" loading="eager">
+        </div>
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <span>Reserve</span>
+            </nav>
+            <h1>Reserve Your Table</h1>
+        </div>
+    </section>
+
+
+    <!-- ===== RESERVATION SECTION ===== -->
+    <section class="reserve-section section-padding">
+        <div class="container">
+            <div class="reserve-grid">
+
+                <!-- Left: Form -->
+                <div class="reserve-form-col reveal">
+                    <h2>Request a Reservation</h2>
+                    <p style="margin-bottom: var(--space-lg); color: var(--color-muted);">We'll confirm your reservation within 2 hours via email. For same-day reservations or parties larger than 6, please call us directly.</p>
+
+                    <form id="reserve-form" class="reserve-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-name">Full Name</label>
+                                <input type="text" id="res-name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="res-email">Email</label>
+                                <input type="email" id="res-email" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-phone">Phone</label>
+                                <input type="tel" id="res-phone" name="phone" required placeholder="(503) 000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="res-guests">Party Size</label>
+                                <select id="res-guests" name="guests" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6 Guests</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-date">Date</label>
+                                <input type="date" id="res-date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-time">Preferred Time</label>
+                                <select id="res-time" name="time" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="17:30">5:30 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="18:30">6:30 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="19:30">7:30 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="20:30">8:30 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-occasion">Occasion <span style="color: var(--color-muted); font-weight: 400;">(optional)</span></label>
+                            <select id="res-occasion" name="occasion">
+                                <option value="" selected>No special occasion</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="date-night">Date Night</option>
+                                <option value="business">Business Dinner</option>
+                                <option value="celebration">Celebration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-notes">Special Requests <span style="color: var(--color-muted); font-weight: 400;">(optional)</span></label>
+                            <textarea id="res-notes" name="notes" rows="3" placeholder="Dietary restrictions, seating preferences, or anything else we should know..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: var(--space-sm);">Request Reservation</button>
+                    </form>
+                </div>
+
+                <!-- Right: Info -->
+                <div class="reserve-info-col reveal">
+                    <div class="reserve-info-card">
+                        <div class="reserve-info-image">
+                            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&h=400&fit=crop&q=80" alt="Inside EMBER restaurant" loading="lazy">
+                        </div>
+                        <div class="reserve-info-details">
+                            <h3>Before You Visit</h3>
+                            <div class="reserve-info-item">
+                                <strong>Hours</strong>
+                                <p>Wednesday through Sunday<br>5:00 PM to 10:00 PM</p>
+                            </div>
+                            <div class="reserve-info-item">
+                                <strong>Dress Code</strong>
+                                <p>Smart casual. Come as you are, but leave the gym shorts at home.</p>
+                            </div>
+                            <div class="reserve-info-item">
+                                <strong>Parking</strong>
+                                <p>Street parking on NW 14th Ave. The SmartPark garage at NW 10th & Glisan is a 5-minute walk.</p>
+                            </div>
+                            <div class="reserve-info-item">
+                                <strong>Dietary Needs</strong>
+                                <p>We accommodate most dietary restrictions. Please mention them in your reservation or call ahead so our kitchen can prepare.</p>
+                            </div>
+                            <div class="reserve-info-item">
+                                <strong>Cancellation</strong>
+                                <p>We ask for 24 hours notice for cancellations. Late cancellations and no-shows may incur a $50 per person fee.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Card -->
+                    <div class="reserve-contact-card">
+                        <h3>Prefer to call?</h3>
+                        <p>For same-day reservations, large parties (7+), or private dining inquiries:</p>
+                        <a href="tel:+15032558347" class="btn btn--outline" style="width: 100%; margin-top: var(--space-sm);">Call (503) 255-8347</a>
+                        <a href="mailto:hello@ember-portland.com" class="btn btn--ghost" style="width: 100%; margin-top: var(--space-xs);">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== MAP & LOCATION ===== -->
+    <section class="location-section" style="background: var(--color-dark-lighter);">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-map reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.0!2d-122.6847!3d45.5275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDMxJzM5LjAiTiAxMjLCsDQxJzA0LjkiVw!5e0!3m2!1sen!2sus!4v1"
+                        width="100%"
+                        height="400"
+                        style="border:0; border-radius: var(--radius-md);"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="EMBER restaurant location">
+                    </iframe>
+                </div>
+                <div class="location-details reveal">
+                    <h2>Find Us</h2>
+                    <div class="location-address">
+                        <p><strong>EMBER</strong><br>
+                        724 NW 14th Avenue<br>
+                        Portland, OR 97209</p>
+                    </div>
+                    <div class="location-hours">
+                        <p><strong>Hours</strong></p>
+                        <table class="hours-table">
+                            <tr><td>Monday</td><td>Closed</td></tr>
+                            <tr><td>Tuesday</td><td>Closed</td></tr>
+                            <tr><td>Wednesday</td><td>5:00 PM - 10:00 PM</td></tr>
+                            <tr><td>Thursday</td><td>5:00 PM - 10:00 PM</td></tr>
+                            <tr><td>Friday</td><td>5:00 PM - 10:00 PM</td></tr>
+                            <tr><td>Saturday</td><td>5:00 PM - 10:00 PM</td></tr>
+                            <tr><td>Sunday</td><td>5:00 PM - 10:00 PM</td></tr>
+                        </table>
+                    </div>
+                    <div class="location-transit">
+                        <p><strong>Getting Here</strong></p>
+                        <p>Pearl District, between NW Kearney & NW Lovejoy. Streetcar stop at NW Lovejoy & 13th is one block south. The Portland Streetcar NS Line stops nearby.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo">EMBER</a>
+                    <p>Open-fire fine dining<br>in Portland, Oregon.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit</h4>
+                    <p>724 NW 14th Avenue<br>Portland, OR 97209</p>
+                    <p style="margin-top: var(--space-xs);"><a href="tel:+15032558347">(503) 255-8347</a></p>
+                    <p><a href="mailto:hello@ember-portland.com">hello@ember-portland.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hours</h4>
+                    <p>Wednesday - Sunday<br>5:00 PM - 10:00 PM</p>
+                    <p style="margin-top: var(--space-xs);">Monday & Tuesday<br>Closed</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EMBER Portland. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

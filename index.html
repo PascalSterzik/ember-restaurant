@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBER | Modern Fire-Driven Fine Dining</title>
+    <meta name="description" content="EMBER is a modern fine dining restaurant where every dish is shaped by flame. Seasonal tasting menus, open-fire kitchen, and an intimate 40-seat dining room.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="EMBER | Modern Fire-Driven Fine Dining">
+    <meta property="og:description" content="Where fire meets finesse. Seasonal tasting menus crafted over open flame.">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://ember-portland.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=630&fit=crop&q=80">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon (amber circle) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c8845f'/></svg>">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "EMBER",
+        "description": "Modern fire-driven fine dining restaurant featuring seasonal tasting menus crafted over open flame.",
+        "url": "https://ember-portland.com",
+        "telephone": "+1-503-255-8347",
+        "email": "hello@ember-portland.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "724 NW 14th Avenue",
+            "addressLocality": "Portland",
+            "addressRegion": "OR",
+            "postalCode": "97209",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.5275,
+            "longitude": -122.6847
+        },
+        "servesCuisine": ["Modern American", "Open Fire", "Farm-to-Table"],
+        "priceRange": "$$$$",
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "17:00", "closes": "22:00" }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "312"
+        },
+        "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=630&fit=crop&q=80",
+        "hasMenu": "https://ember-portland.com/menu.html",
+        "acceptsReservations": "True"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">Ember</a>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="about.html" class="nav-link">Our Story</a>
+                <a href="reserve.html" class="nav-link">Reserve</a>
+            </nav>
+            <a href="reserve.html" class="btn btn--primary header-cta">Reserve a Table</a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&h=1080&fit=crop&q=80" alt="Ember restaurant signature dish over open flame" loading="eager">
+        </div>
+        <div class="hero-content">
+            <div class="hero-eyebrow reveal">
+                <span class="hero-eyebrow-line"></span>
+                <span class="label">Open-Fire Fine Dining</span>
+            </div>
+            <h1 class="reveal reveal-delay-1">Cooked by<br>flame, crafted<br>by hand</h1>
+            <p class="hero-subtitle reveal reveal-delay-2">A 40-seat dining room where seasonal ingredients meet open fire. Every dish tells the story of its source.</p>
+            <div class="hero-actions reveal reveal-delay-3">
+                <a href="reserve.html" class="btn btn--primary">Reserve a Table</a>
+                <a href="menu.html" class="btn btn--outline">View the Menu</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Intro / Philosophy -->
+    <section class="intro" id="intro">
+        <div class="container container--narrow">
+            <div class="divider divider--center reveal"></div>
+            <p class="intro-text reveal">We don't cook with fire because it's trendy. We cook with fire because <em>nothing else</em> gives you that depth, that char, that primal pull that makes you close your eyes mid-bite.</p>
+        </div>
+    </section>
+
+    <!-- Signature Dishes -->
+    <section class="dishes" id="dishes">
+        <div class="container">
+            <div class="section-heading section-heading--center reveal">
+                <span class="label">From the Hearth</span>
+                <h2>Signature Plates</h2>
+                <div class="divider divider--center"></div>
+            </div>
+        </div>
+        <div class="dishes-grid stagger-children">
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=1100&fit=crop&q=80" alt="Dry-aged ribeye over oak embers" loading="lazy">
+                <div class="dish-card-overlay">
+                    <span class="dish-card-name">Dry-Aged Ribeye</span>
+                    <span class="dish-card-desc">Oak embers, bone marrow butter, charred shallot</span>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&h=1000&fit=crop&q=80" alt="Whole roasted cauliflower with tahini" loading="lazy">
+                <div class="dish-card-overlay">
+                    <span class="dish-card-name">Ember Cauliflower</span>
+                    <span class="dish-card-desc">Whole roasted, black garlic tahini, pomegranate</span>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=1000&fit=crop&q=80" alt="Fire-kissed octopus" loading="lazy">
+                <div class="dish-card-overlay">
+                    <span class="dish-card-name">Fire-Kissed Octopus</span>
+                    <span class="dish-card-desc">Charcoal grilled, smoked paprika, confit potato</span>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=1000&fit=crop&q=80" alt="Smoked chocolate dessert" loading="lazy">
+                <div class="dish-card-overlay">
+                    <span class="dish-card-name">Smoked Chocolate</span>
+                    <span class="dish-card-desc">Valrhona 72%, applewood smoke, burnt caramel</span>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&h=1000&fit=crop&q=80" alt="Flame-seared scallops" loading="lazy">
+                <div class="dish-card-overlay">
+                    <span class="dish-card-name">Flame-Seared Scallops</span>
+                    <span class="dish-card-desc">Diver scallops, truffle celeriac, hazelnut brown butter</span>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align:center; margin-top:48px;">
+            <a href="menu.html" class="btn btn--ghost reveal">Explore the Full Menu &rarr;</a>
+        </div>
+    </section>
+
+    <!-- About Teaser -->
+    <section class="about-teaser reveal" id="about">
+        <div class="about-teaser-img">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1000&h=800&fit=crop&q=80" alt="Chef Marcus Hale working over open fire in the EMBER kitchen" loading="lazy">
+        </div>
+        <div class="about-teaser-content">
+            <span class="label">Our Story</span>
+            <h2>Fire has always<br>been the answer</h2>
+            <div class="divider"></div>
+            <p>Chef Marcus Hale spent a decade in kitchens built on precision and technique. Then he spent a summer in the mountains of Patagonia, cooking over open fire for a group of strangers, and everything changed.</p>
+            <p>EMBER was born from that realization: the best flavors come from the simplest methods. Wood. Flame. Patience. We source within 100 miles, change the menu with the seasons, and let the fire do what it does best.</p>
+            <span class="chef-signature">Marcus Hale, Chef & Founder</span>
+            <a href="about.html" class="btn btn--ghost">Read the full story &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="awards reveal">
+        <div class="container">
+            <div class="awards-inner">
+                <div class="award-item">
+                    <span class="award-icon">&#9733;</span>
+                    <span class="award-label">Michelin Star 2025</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-icon">&#9830;</span>
+                    <span class="award-label">James Beard Semifinalist</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-icon">&#9827;</span>
+                    <span class="award-label">Bon App&eacute;tit Top 50</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-icon">&#9824;</span>
+                    <span class="award-label">Portland Mercury Best New Restaurant</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-icon">&#10047;</span>
+                    <span class="award-label">4.9 &#9733; on Google (312 reviews)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+        <div class="container">
+            <div class="section-heading section-heading--center reveal">
+                <span class="label">What Guests Say</span>
+                <h2>Words from our table</h2>
+                <div class="divider divider--center"></div>
+            </div>
+            <div class="reviews-grid stagger-children">
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">I've eaten at restaurants all over the world, and the ribeye at EMBER is in a class of its own. The smoke, the sear, the bone marrow butter. I can still taste it three weeks later.</p>
+                    <p class="review-author">James T.</p>
+                    <p class="review-source">Google Review</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">We came for an anniversary dinner and left feeling like we'd experienced something rare. The way they use fire isn't a gimmick. You can taste the difference in every single bite.</p>
+                    <p class="review-author">Sara & Michael K.</p>
+                    <p class="review-source">Google Review</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">The tasting menu was a journey. Seven courses, each one built around a different wood and a different flavor profile. The sommelier pairing was flawless. Book it. Trust me.</p>
+                    <p class="review-author">Elena R.</p>
+                    <p class="review-source">Google Review</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Strip -->
+    <section class="gallery-strip reveal" style="padding:0;">
+        <div class="gallery-strip-item">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=600&fit=crop&q=80" alt="EMBER dining room interior with warm lighting" loading="lazy">
+        </div>
+        <div class="gallery-strip-item">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=600&fit=crop&q=80" alt="Atmospheric bar area at EMBER" loading="lazy">
+        </div>
+        <div class="gallery-strip-item">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop&q=80" alt="Artfully plated dish at EMBER" loading="lazy">
+        </div>
+        <div class="gallery-strip-item">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&h=600&fit=crop&q=80" alt="Chef preparing dishes in the open kitchen" loading="lazy">
+        </div>
+        <div class="gallery-strip-item">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=600&h=600&fit=crop&q=80" alt="Cocktail service at the EMBER bar" loading="lazy">
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-banner-bg">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=800&fit=crop&q=80" alt="Fine dining experience at EMBER" loading="lazy">
+        </div>
+        <div class="container cta-banner-content reveal">
+            <span class="label">Your Table Awaits</span>
+            <h2>Make it a night<br>to remember</h2>
+            <p>We serve Wednesday through Sunday, 5:00 PM to 10:00 PM. Tasting menu reservations require 48 hours notice.</p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a href="reserve.html" class="btn btn--primary">Reserve Online</a>
+                <a href="tel:+15032558347" class="btn btn--outline">Call (503) 255-8347</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <span class="footer-logo">Ember</span>
+                    <p class="footer-about">Modern fire-driven fine dining. Seasonal ingredients, open flame, and the belief that the best meals start with the simplest elements.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">X</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="about.html">Our Story</a>
+                        <a href="reserve.html">Reservations</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hours</h4>
+                    <div class="footer-links">
+                        <span style="color:var(--text-muted); font-size:0.9rem;">Wednesday - Sunday</span>
+                        <span style="color:var(--text-muted); font-size:0.9rem;">5:00 PM - 10:00 PM</span>
+                        <span style="color:var(--text-muted); font-size:0.9rem;">Monday & Tuesday: Closed</span>
+                    </div>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Find Us</h4>
+                    <p>724 NW 14th Avenue<br>Portland, OR 97209</p>
+                    <p><a href="tel:+15032558347">(503) 255-8347</a></p>
+                    <p><a href="mailto:hello@ember-portland.com">hello@ember-portland.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EMBER Restaurant. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky">
+        <a href="tel:+15032558347" class="btn btn--outline">Call Us</a>
+        <a href="reserve.html" class="btn btn--primary">Reserve</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

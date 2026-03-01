@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | EMBER Restaurant</title>
+    <meta name="description" content="Explore EMBER's seasonal menu: tasting menus, open-fire a la carte dishes, and a curated wine list. Every dish cooked over wood flame.">
+    <meta property="og:title" content="Menu | EMBER Restaurant">
+    <meta property="og:description" content="Seasonal tasting menus and open-fire a la carte dishes.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&h=630&fit=crop&q=80">
+    <meta property="og:url" content="https://ember-portland.com/menu">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c8845f'/></svg>">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "EMBER Menu",
+        "description": "Seasonal tasting menus and open-fire a la carte dishes",
+        "hasMenuSection": [
+            { "@type": "MenuSection", "name": "Tasting Menu", "description": "Seven-course fire-driven tasting experience" },
+            { "@type": "MenuSection", "name": "A La Carte", "description": "Open-fire dishes available individually" },
+            { "@type": "MenuSection", "name": "Wine & Spirits", "description": "Curated wine list and handcrafted cocktails" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="header-logo">Ember</a>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link active">Menu</a>
+                <a href="about.html" class="nav-link">Our Story</a>
+                <a href="reserve.html" class="nav-link">Reserve</a>
+            </nav>
+            <a href="reserve.html" class="btn btn--primary header-cta">Reserve a Table</a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1920&h=600&fit=crop&q=80" alt="EMBER menu" loading="eager">
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Menu</span>
+            </div>
+            <span class="label reveal" style="display:block; text-align:center; margin-bottom:16px;">What We Serve</span>
+            <h1 class="reveal" style="font-size:clamp(2.5rem,5vw,4.5rem);">The Menu</h1>
+            <div class="divider divider--center reveal"></div>
+            <p class="reveal" style="color:var(--text-secondary); text-align:center; max-width:550px; margin:0 auto; font-size:1.05rem;">Our menu changes with the seasons. What stays constant: every ingredient is sourced within 100 miles, and every dish is cooked over open flame.</p>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <section style="padding-top:0;">
+        <div class="container container--narrow">
+
+            <!-- Tabs -->
+            <div class="menu-tabs reveal">
+                <button class="menu-tab active" data-tab="tasting">Tasting Menu</button>
+                <button class="menu-tab" data-tab="carte">A La Carte</button>
+                <button class="menu-tab" data-tab="wine">Wine & Spirits</button>
+            </div>
+
+            <!-- Tasting Menu -->
+            <div class="menu-panel active" data-panel="tasting">
+                <div style="text-align:center; margin-bottom:48px;" class="reveal">
+                    <h2 style="font-size:2rem; margin-bottom:8px;">The Fire Tasting</h2>
+                    <p style="color:var(--text-secondary); font-style:italic;">Seven courses &middot; $185 per person &middot; Wine pairing available (+$95)</p>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Amuse-Bouche</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Charred Sourdough Crisp</div>
+                            <div class="menu-item-desc">Smoked ricotta, ember-roasted tomato jam, micro basil</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">First Course</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Flame-Seared Diver Scallops</div>
+                            <div class="menu-item-desc">Truffle celeriac puree, hazelnut brown butter, pickled apple</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Second Course</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Wood-Roasted Beet Tartare</div>
+                            <div class="menu-item-desc">Smoked goat cheese mousse, walnut vinaigrette, ash crumble</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Intermezzo</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Charcoal Sorbet</div>
+                            <div class="menu-item-desc">Activated coconut charcoal, yuzu, ginger</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Third Course</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Fire-Kissed Wild Salmon</div>
+                            <div class="menu-item-desc">Cedar plank, fennel pollen, burnt citrus beurre blanc</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Main Course</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">45-Day Dry-Aged Ribeye</div>
+                            <div class="menu-item-desc">Oak embers, bone marrow butter, charred shallot, black garlic jus</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Cheese</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Pacific Northwest Artisan Selection</div>
+                            <div class="menu-item-desc">Three regional cheeses, smoked honeycomb, ember-toasted bread</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Dessert</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Smoked Valrhona Chocolate</div>
+                            <div class="menu-item-desc">Applewood smoke, burnt caramel, vanilla bean ice cream, gold leaf</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="menu-note reveal">The tasting menu requires 48 hours advance reservation. Dietary accommodations available with prior notice. Please inform us of any allergies.</p>
+            </div>
+
+            <!-- A La Carte -->
+            <div class="menu-panel" data-panel="carte">
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">To Start</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Charred Sourdough &amp; Smoked Butter</div><div class="menu-item-desc">House-baked, cultured butter smoked with applewood</div></div>
+                        <span class="menu-item-price">$12</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Ember Cauliflower</div><div class="menu-item-desc">Whole roasted, black garlic tahini, pomegranate, toasted pine nuts</div></div>
+                        <span class="menu-item-price">$22</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Wood-Roasted Bone Marrow</div><div class="menu-item-desc">Parsley gremolata, charred crostini, fleur de sel</div></div>
+                        <span class="menu-item-price">$26</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Flame-Seared Diver Scallops</div><div class="menu-item-desc">Truffle celeriac, hazelnut brown butter, pickled apple</div></div>
+                        <span class="menu-item-price">$32</span>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">From the Hearth</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Fire-Kissed Wild Salmon</div><div class="menu-item-desc">Cedar plank, fennel pollen, burnt citrus beurre blanc</div></div>
+                        <span class="menu-item-price">$42</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Fire-Kissed Octopus</div><div class="menu-item-desc">Charcoal grilled, smoked paprika, confit potato, chorizo crumble</div></div>
+                        <span class="menu-item-price">$38</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Whole Roasted Chicken for Two</div><div class="menu-item-desc">Free-range, rotisserie over cherry wood, seasonal vegetables, jus</div></div>
+                        <span class="menu-item-price">$68</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">45-Day Dry-Aged Ribeye</div><div class="menu-item-desc">Oak embers, bone marrow butter, charred shallot, black garlic jus</div></div>
+                        <span class="menu-item-price">$72</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Wood-Fired Lamb Rack</div><div class="menu-item-desc">Mesquite, harissa yogurt, roasted eggplant, mint</div></div>
+                        <span class="menu-item-price">$64</span>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Sides</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Ember-Roasted Vegetables</div><div class="menu-item-desc">Seasonal selection, herb oil</div></div>
+                        <span class="menu-item-price">$14</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Charred Broccolini</div><div class="menu-item-desc">Chili flake, lemon, toasted almonds</div></div>
+                        <span class="menu-item-price">$12</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Smoked Potato Gratin</div><div class="menu-item-desc">Gruyere, thyme, cream</div></div>
+                        <span class="menu-item-price">$14</span>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Sweet</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Smoked Valrhona Chocolate</div><div class="menu-item-desc">Applewood smoke, burnt caramel, vanilla bean ice cream</div></div>
+                        <span class="menu-item-price">$18</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Flame-Roasted Pear</div><div class="menu-item-desc">Cardamom, mascarpone, toasted oat crumble</div></div>
+                        <span class="menu-item-price">$16</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Artisan Cheese Selection</div><div class="menu-item-desc">Three PNW cheeses, smoked honeycomb, ember-toasted bread</div></div>
+                        <span class="menu-item-price">$22</span>
+                    </div>
+                </div>
+
+                <p class="menu-note reveal">Prices are per person. A 20% service charge is added for parties of 6 or more. Please inform your server of any allergies or dietary requirements.</p>
+            </div>
+
+            <!-- Wine & Spirits -->
+            <div class="menu-panel" data-panel="wine">
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Sparkling</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Argyle Brut, Willamette Valley 2020</div><div class="menu-item-desc">Crisp, citrus, toasted brioche</div></div>
+                        <span class="menu-item-price">$16 / $64</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Schramsberg Blanc de Blancs, Napa 2019</div><div class="menu-item-desc">Green apple, almond, fine mousse</div></div>
+                        <span class="menu-item-price">$22 / $88</span>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">White</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Ponzi Pinot Gris, Willamette Valley 2022</div><div class="menu-item-desc">Stone fruit, honeysuckle, mineral</div></div>
+                        <span class="menu-item-price">$14 / $56</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Domaine Drouhin Chardonnay, Dundee Hills 2021</div><div class="menu-item-desc">White peach, vanilla, balanced oak</div></div>
+                        <span class="menu-item-price">$18 / $72</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Evening Land Chardonnay, Eola-Amity 2020</div><div class="menu-item-desc">Lemon curd, hazelnut, creamy texture</div></div>
+                        <span class="menu-item-price">$22 / $88</span>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Red</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Cristom Pinot Noir, Mt. Jefferson Cuvee 2021</div><div class="menu-item-desc">Dark cherry, earth, fine tannin</div></div>
+                        <span class="menu-item-price">$18 / $72</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Beaux Freres Pinot Noir, Ribbon Ridge 2019</div><div class="menu-item-desc">Raspberry, spice, velvet texture</div></div>
+                        <span class="menu-item-price">$28 / $112</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Quilceda Creek Cabernet Sauvignon, Columbia Valley 2018</div><div class="menu-item-desc">Blackcurrant, cedar, powerful structure</div></div>
+                        <span class="menu-item-price">$42 / $168</span>
+                    </div>
+                </div>
+
+                <div class="menu-section reveal">
+                    <h3 class="menu-section-title">Smoke & Fire Cocktails</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">The Ember Old Fashioned</div><div class="menu-item-desc">Bourbon, smoked maple, Angostura, orange zest, cherry wood smoke</div></div>
+                        <span class="menu-item-price">$18</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Charred Negroni</div><div class="menu-item-desc">Gin, Campari, sweet vermouth, charred orange peel</div></div>
+                        <span class="menu-item-price">$17</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info"><div class="menu-item-name">Smoke Signal</div><div class="menu-item-desc">Mezcal, elderflower, lime, applewood smoke, activated charcoal</div></div>
+                        <span class="menu-item-price">$19</span>
+                    </div>
+                </div>
+
+                <p class="menu-note reveal">Glass / Bottle. Our sommelier is happy to suggest pairings for your meal. Full wine list with 120+ selections available at your table.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="cta-banner-bg">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&h=600&fit=crop&q=80" alt="EMBER dining atmosphere" loading="lazy">
+        </div>
+        <div class="container cta-banner-content reveal">
+            <span class="label">Taste It Yourself</span>
+            <h2>Reserve your table</h2>
+            <p>The tasting menu requires 48 hours notice. A la carte is available on a walk-in basis, subject to availability.</p>
+            <a href="reserve.html" class="btn btn--primary">Make a Reservation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <span class="footer-logo">Ember</span>
+                    <p class="footer-about">Modern fire-driven fine dining. Seasonal ingredients, open flame, and the belief that the best meals start with the simplest elements.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Twitter">X</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <div class="footer-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">Our Story</a><a href="reserve.html">Reservations</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hours</h4>
+                    <div class="footer-links">
+                        <span style="color:var(--text-muted);font-size:0.9rem;">Wednesday - Sunday</span>
+                        <span style="color:var(--text-muted);font-size:0.9rem;">5:00 PM - 10:00 PM</span>
+                        <span style="color:var(--text-muted);font-size:0.9rem;">Monday & Tuesday: Closed</span>
+                    </div>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Find Us</h4>
+                    <p>724 NW 14th Avenue<br>Portland, OR 97209</p>
+                    <p><a href="tel:+15032558347">(503) 255-8347</a></p>
+                    <p><a href="mailto:hello@ember-portland.com">hello@ember-portland.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EMBER Restaurant. All rights reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-sticky">
+        <a href="tel:+15032558347" class="btn btn--outline">Call Us</a>
+        <a href="reserve.html" class="btn btn--primary">Reserve</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
