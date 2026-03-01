@@ -318,7 +318,7 @@ section {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: rgba(237, 235, 232, 0.7);
     text-decoration: none;
     position: relative;
     transition: color var(--duration-fast) var(--ease-smooth);
@@ -342,6 +342,9 @@ section {
     transform: scaleX(1);
     transform-origin: left;
 }
+.header.scrolled .nav-link { color: var(--text-secondary); }
+.header.scrolled .nav-link:hover,
+.header.scrolled .nav-link.active { color: var(--text); }
 
 .header-cta {
     font-size: 0.7rem;
@@ -663,7 +666,16 @@ section {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
     animation: float 3s ease-in-out infinite;
+    transition: color var(--duration-fast) var(--ease-smooth);
+}
+.hero-scroll:hover {
+    color: var(--amber);
+}
+.hero-scroll:hover .hero-scroll-line {
+    background: linear-gradient(to bottom, var(--amber-light), transparent);
 }
 
 .hero-scroll-line {
@@ -826,8 +838,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(32px, 5vw, 80px);
-    flex-wrap: wrap;
+    gap: clamp(24px, 4vw, 64px);
+    flex-wrap: nowrap;
 }
 
 .award-item {
@@ -1873,7 +1885,7 @@ section {
     .reviews-grid { grid-template-columns: 1fr; }
     .reviews-grid > :nth-child(3) { display: block; }
 
-    .awards-inner { gap: 24px; }
+    .awards-inner { gap: 24px; flex-wrap: wrap; justify-content: center; }
 
     .gallery-strip { flex-wrap: wrap; }
     .gallery-strip-item { flex: 1 1 calc(50% - 1px); aspect-ratio: 4/3; }
